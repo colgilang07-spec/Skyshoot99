@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SKYSHOOT - Photography Tour Jepang</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body { font-family: 'Poppins', sans-serif; }
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1549692520-acc6669e2f0c');
+  background-size: cover;
+  background-position: center;
+}
+.glass {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+}
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+</style>
+
+</head>
+
+<body class="bg-gradient-to-b from-pink-50 via-white to-blue-50 text-gray-800">
+
+<!-- NAVBAR -->
+<nav class="fixed w-full bg-white/70 backdrop-blur-md shadow-sm z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+    <div class="flex items-center gap-3">
+      <img src="https://via.placeholder.com/100x100.png?text=SKY" class="logo">
+      <h1 class="text-2xl font-bold text-pink-500">SKYSHOOT</h1>
+    </div>
+    <div class="space-x-6 font-medium">
+      <a href="#home" class="hover:text-pink-400">Home</a>
+      <a href="#price" class="hover:text-pink-400">Price</a>
+      <a href="#booking" class="hover:text-pink-400">Booking</a>
+      <a href="#gallery" class="hover:text-pink-400">Gallery</a>
+      <a href="#contact" class="hover:text-pink-400">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero h-screen flex items-center justify-center text-center">
+  <div class="glass p-10 shadow-xl">
+    <h1 class="text-5xl font-bold text-pink-500 mb-4">SKYSHOOT</h1>
+    <p class="text-lg mb-6">Photography Guide & Tour Jepang - Tokyo & Sekitarnya</p>
+    <a href="#booking" class="bg-pink-400 text-white px-6 py-3 rounded-xl hover:bg-pink-500">
+      Booking Sekarang
+    </a>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section id="price" class="py-20 text-center">
+  <h2 class="text-3xl font-bold text-pink-500 mb-10">Price List</h2>
+
+  <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
+
+    <div class="glass p-6 shadow">
+      <h3 class="text-xl font-bold">Basic</h3>
+      <p class="text-3xl font-bold text-pink-500">¥20,000</p>
+      <p>≈ Rp 2.100.000</p>
+      <p class="mt-3">2 Jam - Tokyo Area</p>
+    </div>
+
+    <div class="glass p-6 shadow border border-pink-300">
+      <h3 class="text-xl font-bold">Standard</h3>
+      <p class="text-3xl font-bold text-pink-500">¥35,000</p>
+      <p>≈ Rp 3.700.000</p>
+      <p class="mt-3">4 Jam - Tokyo + Hidden Spot</p>
+    </div>
+
+    <div class="glass p-6 shadow">
+      <h3 class="text-xl font-bold">Premium</h3>
+      <p class="text-3xl font-bold text-pink-500">¥55,000</p>
+      <p>≈ Rp 5.800.000</p>
+      <p class="mt-3">Full Day - Mt Fuji / Yokohama</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- LOGIN & BOOKING -->
+<section id="booking" class="py-20">
+
+  <div class="max-w-md mx-auto glass p-8 shadow">
+    <h2 class="text-2xl font-bold text-center text-pink-500 mb-6">Login Customer</h2>
+
+    <input id="username" placeholder="Username" class="w-full p-3 mb-3 rounded border">
+    <input id="password" type="password" placeholder="Password" class="w-full p-3 mb-3 rounded border">
+
+    <button onclick="login()" class="w-full bg-pink-400 text-white p-3 rounded-xl">
+      Login
+    </button>
+
+    <p id="loginStatus" class="text-center mt-3"></p>
+  </div>
+
+  <!-- BOOKING FORM -->
+  <div id="bookingForm" class="hidden max-w-md mx-auto glass p-8 shadow mt-10">
+
+    <h2 class="text-xl font-bold text-pink-500 mb-4 text-center">Form Booking</h2>
+
+    <input placeholder="Nama" class="w-full p-3 mb-3 border rounded">
+    <input type="date" class="w-full p-3 mb-3 border rounded">
+
+    <select class="w-full p-3 mb-3 border rounded">
+      <option>Pilih Lokasi</option>
+      <option>Shibuya</option>
+      <option>Shinjuku</option>
+      <option>Asakusa</option>
+      <option>Mt Fuji</option>
+    </select>
+
+    <select class="w-full p-3 mb-3 border rounded">
+      <option>Pilih Paket</option>
+      <option>Basic ¥20,000</option>
+      <option>Standard ¥35,000</option>
+      <option>Premium ¥55,000</option>
+    </select>
+
+    <button onclick="sendWA()" class="w-full bg-green-500 text-white p-3 rounded-xl">
+      Kirim via WhatsApp
+    </button>
+
+  </div>
+</section>
+
+<!-- GALLERY INSTAGRAM -->
+<section id="gallery" class="py-20">
+  <h2 class="text-center text-3xl font-bold text-pink-500 mb-10">
+    Gallery Instagram SKYSHOOT
+  </h2>
+
+  <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto px-6">
+
+    <iframe src="https://www.instagram.com/p/DUUkwhMgV6z/embed"
+      class="w-full h-[500px] rounded-xl shadow bg-white"></iframe>
+
+    <iframe src="https://www.instagram.com/p/DUQb3WugdI1/embed"
+      class="w-full h-[500px] rounded-xl shadow bg-white"></iframe>
+
+    <iframe src="https://www.instagram.com/p/DUGrrURk9ti/embed"
+      class="w-full h-[500px] rounded-xl shadow bg-white"></iframe>
+
+    <iframe src="https://www.instagram.com/p/DTsTiyIAYPu/embed"
+      class="w-full h-[500px] rounded-xl shadow bg-white"></iframe>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-20 text-center">
+  <h2 class="text-3xl font-bold text-pink-500 mb-4">Contact SKYSHOOT</h2>
+
+  <p>Instagram: @SkyShoot_99</p>
+  <p>TikTok: @Skyshoot99</p>
+  <p>WhatsApp: 09074114112</p>
+
+  <div class="mt-5">
+    <a href="https://instagram.com/SkyShoot_99" class="bg-pink-400 text-white px-5 py-2 rounded-xl mr-3">
+      Instagram
+    </a>
+    <a href="https://wa.me/819074114112" class="bg-green-500 text-white px-5 py-2 rounded-xl">
+      WhatsApp
+    </a>
+  </div>
+</section>
+
+<footer class="text-center p-6">
+  © 2026 SKYSHOOT Japan Photography Tour
+</footer>
+
+<script>
+const account = {
+  username: "skyshoot",
+  password: "12345"
+}
+
+function login(){
+  const user = document.getElementById("username").value;
+  const pass = document.getElementById("password").value;
+
+  if(user === account.username && pass === account.password){
+    document.getElementById("loginStatus").innerHTML = "Login berhasil";
+    document.getElementById("bookingForm").classList.remove("hidden");
+  } else {
+    document.getElementById("loginStatus").innerHTML = "Login gagal";
+  }
+}
+
+function sendWA(){
+  window.open("https://wa.me/819074114112","_blank");
+}
+</script>
+
+</body>
+</html>
